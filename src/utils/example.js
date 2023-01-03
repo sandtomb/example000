@@ -13,6 +13,6 @@ export function evaluateForEven(customList) {
     throw new Error('Parameter is not a CustomList.')
   } else if (customList.getNums().length === 0) {
     return false
-  } 
-  return customList.getNums().some(num => num % 2 === 0 && num !== 0)
+  }
+  return customList.getNums().some((num) => num % 2 === 0 && num !== 0)
 }
