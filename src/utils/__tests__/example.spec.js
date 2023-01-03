@@ -23,6 +23,10 @@ describe('evaluateForEven', () => {
       data: new CustomList([1, 7, 0]),
       expected: false,
     },
+    {
+      data: new CustomList([1, 7, 0, 2]),
+      expected: true,
+    },
   ]
 
   testCases.forEach((testCase) => {

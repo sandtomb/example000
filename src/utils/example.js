@@ -3,15 +3,16 @@ export class CustomList {
     this.nums = nums
   }
 
-  containsEven() {
-    return this.nums.length > 0
-  }
-
   getNums() {
     return this.nums
   }
 }
 
-export function evaluateForEven() {
-  return false
+export function evaluateForEven(customList) {
+  if (!(customList instanceof CustomList)) {
+    throw new Error('Parameter is not a CustomList.')
+  } else if (customList.getNums().length === 0) {
+    return false
+  } 
+  return customList.getNums().some(num => num % 2 === 0 && num !== 0)
 }
